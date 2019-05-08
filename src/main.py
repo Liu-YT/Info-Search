@@ -15,14 +15,9 @@ def main():
         if num != 0 and num <= len(all_check_result):
             query = ''.join(all_check_result[num - 1])
     score = s.info_search(query)
-    print("总共检索到" + str(len(score)) + "个结果，接下来将输出前十个结果。")
-    for i in range(10):
-        if i < len(score):
+    print("总共检索到" + str(len(score)) + "个结果")
+    for i in range(len(score)):
             print(score[i]["file"])
-    print("......")
-    
-
-
 
 
 

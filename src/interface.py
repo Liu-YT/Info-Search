@@ -144,7 +144,8 @@ class info_retrieval:
                 "file": file
             })
         score = sorted(score, key=lambda item: item["score"], reverse=True)
-        return score
+        result = [item for item in score if item["score"] > 0]
+        return result
 
     # 计算TF/IDF
     def if_idf(self, word_list, file):
